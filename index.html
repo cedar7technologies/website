@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:200,regular" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+  <script type="text/javascript">
+    var count = 0;
+    function changeImages()
+    {
+        var images = ["pexels-the-lazy-artist-gallery-1342609.jpg","pexels-r-fera-432059.jpg","gettyimages-1189143194-2048x2048.jpg","e8289fa2be47856b1f1d2973eddb4cb2.jpg","pexels-lilartsy-1374128.jpg","gettyimages-1083711754-2048x2048.jpg"]
+        document.getElementById("fifthRect").src=images[count];
+        console.log('line 16',count);
+        count+=1;
+        if(count>1){
+            count_c = count-2;
+            console.log(count_c);
+            document.getElementById("fifthRect").src=images[count_c];
+        }
+        if(count>2){
+            count_c = count-3
+            document.getElementById("fourthRect").src = images[count_c];
+        }
+
+        if(count>3){
+            count_c = count-4
+            document.getElementById("thirdRect").src = images[count_c];
+        }
+
+        if(count>4){
+            count_c = count-5
+            document.getElementById("secondRect").src = images[count_c];
+        }
+
+        if(count>5){
+            count_c = count-6
+            document.getElementById("firstRect").src = images[count_c];
+        }
+
+        if(images.length==count){
+            count=0;
+        }
+        /* xyzzaa */
+    }
+
+    window.onload = function () {
+    setInterval(changeImages, 5000);
+};
+
+
+  </script>
+<style>
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0px;
+        height:3000px;
+    }
+
+
+    .top-container{
+        height: 200px;
+        background-size: cover;
+        background-image: radial-gradient(farthest-side at 100% 15%, green, white);
+        /* background-color: red; */
+        /* margin-bottom: 45px; */
+        margin-bottom: 1em;
+    }
+    .inner-rect{
+        height: 100px;
+        background-color: #078322;
+        width: 130px;
+        -ms-transform: rotate(-20deg);
+        transform: rotate(75deg);
+        position: absolute;
+        left: -60px;
+    }
+    .top-container-info{
+        font-family: Montserrat;
+        position: absolute;
+        top: 120px;
+        left: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+
+    .inner-container-image-container{
+        text-align:center;
+    }
+
+    .inner-container-image{
+        height: auto;
+        width: 80%;
+    }
+
+    .container-info {
+        margin-top: 1em;
+        text-align: center;
+        font-family: Montserrat;
+        line-height: 40px;
+        margin-bottom: 1em;
+    }
+
+    .line{
+        border-style: solid;
+        width: 150px;
+        border-width: 0.1px;
+        margin-left: auto;
+        margin-right: auto;
+        border-color: #cccccc;
+    }
+
+    .services-container{
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        /* background-color: red; */
+        display: table;
+        margin: 0px;
+        margin: auto;
+    }
+    .services-inner-rect{
+        height: 100px;
+        background-color: #078322;
+        width: 101px;
+        transform: rotate(43deg);
+        position: absolute;
+        right: -53px;
+        bottom: 17px;
+    }
+
+    .services{
+        /* background-color: yellow; */
+        height: inherit;
+        margin-right: auto;
+        margin-left: auto;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+
+    }
+
+
+    .service-container{
+        /* background-color: blue; */
+        /* height: 90px; */
+        height: inherit;
+        line-height: 52px;
+    }
+
+    .services-parent-container{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .icon-container, .content-container{
+        display:inline-block;
+    }
+    .icon-container{
+        width: 50px;
+        text-align: center;
+    }
+    .content-container{
+        text-align:center;
+    }
+    .recent-events-container{
+        height: auto;
+        border-radius: 0px 30px 0px 30px;
+        width: 90%;
+        margin: auto;
+        border-color: #078322;
+        border-style: solid;
+        box-shadow: 1px 1px #078322;
+        border-width: 0.1px;
+    }
+
+    .recent-events-image{
+        width: auto;
+        height:200px;
+        border-radius: 8px;
+        /* text-align: center; */
+    }
+
+    .recent-events-image-container{
+        width: 100%;
+        border-radius: 0px 30px 0px 0px;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        overflow:hidden;
+    }
+
+    .recent-events-para-container{
+        width: 100%;
+        height: 200px;
+        /* float: left; */
+        /* display: inline-block; */
+        border-radius: 0px 0px 0px 30px;
+        font-size: 15px;
+        overflow: hidden;
+        padding: 5px;
+
+    }
+
+    .event-details{
+        height: 150px;
+        overflow: hidden;
+        font-size: 12px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .event-container-buttons{
+        position: relative;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        /* float: left; */
+        /* display: inherit; */
+        height: 50px;
+    }
+
+    button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #078322;
+        border-radius: 5px;
+        /* outline-style: none; */
+        /* box-shadow: 0px 0px #ffffff; */
+        border-style: none;
+        font-size: 12px;
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+    }
+
+
+    .separator{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .our-promise-container{
+        height: 200px;
+        background-color: yellow;
+        display: table;
+        margin: auto;
+        border-radius: 0px 30px 0px 30px;
+    }
+
+    .content-for-promise{
+        height: inherit;
+        background-color: green;
+        width: 300px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-family: 'Montserrat';
+        border-radius: 0px 30px 0px 30px;
+    }
+
+    .clients-container{
+        height: 80px;
+        width: 63%;
+        margin: auto;
+        background-image: radial-gradient(farthest-side at 100% 15%, green, white);
+    }
+
+    .clients{
+        margin-right: auto;
+        margin-left: auto;
+        vertical-align: middle;
+        display: table-cell;
+        padding:10px;
+    }
+
+    #firstRect{
+        display:none;
+    }
+
+    #secondRect{
+        display:none;
+    }
+    #fourthRect{
+        display:none;
+    }
+
+    #fifthRect{
+        display:none;
+    }
+
+    .clients{
+        display:none;
+    }
+    .center-client{
+        display: block;
+        text-align: center;
+    }
+
+
+
+
+
+
+    @media screen and (min-width:600px){
+
+
+
+        .top-container-info {
+            font-size: 35px;
+        }
+        .top-container {
+            height: 200px;
+            background-size: cover;
+            background-image: radial-gradient(farthest-side at 100% 15%, green, white);
+            /* background-color: red; */
+            /* margin-bottom: 45px; */
+        }
+        .container-info{
+            font-size: 20px;
+        }
+        .line{
+            width: 200px;
+        }
+
+
+    }
+    @media screen and (min-width:900px){
+        .top-container-info {
+            font-size: 60px;
+        }
+        .inner-container-image {
+            height: auto;
+            width: 70%;
+        }
+        .container-info {
+            font-size: 25px;
+        }
+        .line{
+            width: 250px;
+        }
+
+    .recent-events-image-container{
+        width: 50%;
+        display: inline-block;
+        float: left;
+        border-radius: 0px 0px 0px 30px;
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+    }
+    .recent-events-para-container{
+        width: 50%;
+        display:inline-block;
+    }
+
+    #firstRect{
+        display:block;
+    }
+
+    #secondRect{
+        display:block;
+    }
+
+    #fourthRect{
+        display:block;
+    }
+
+    #fifthRect{
+        display:inline-block;
+    }
+
+    .center{
+        height:auto;
+
+    }
+
+    .clients-container{
+        height: 80px;
+        width: 65%;
+        margin: auto;
+    }
+
+    .clients {
+    display: inline-block;
+}
+
+
+
+
+
+    }
+</style>
+
+<body>
+    <div class="top-container">
+        <div class="inner-rect"></div>
+        <div class="top-container-info">
+            Be in the Business Line
+        </div>
+    </div>
+    <div class="inner-container-image-container">
+        <img class="inner-container-image" src="gettyimages-1083711754-2048x2048.jpg" alt="">
+    </div>
+
+
+    <div class="container-info">
+        RECENT EVENTS
+        <div class="line"></div>
+    </div>
+
+
+    <div class="recent-events-container">
+        <div class="recent-events-image-container">
+            <img class="recent-events-image" src="pexels-the-lazy-artist-gallery-1342609.jpg" alt="" />
+        </div>
+        <div class="recent-events-para-container">
+            <div class="event-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="event-container-buttons">
+                <button>Read more...</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="separator">
+
+    </div>
+
+    <div class="recent-events-container">
+        <div class="recent-events-image-container">
+            <img class="recent-events-image" src="pexels-lilartsy-1374128.jpg" alt="" />
+        </div>
+        <div class="recent-events-para-container">
+            <div class="event-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="event-container-buttons">
+                <button>Read more...</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="separator">
+
+    </div>
+
+    <div class="recent-events-container">
+        <div class="recent-events-image-container">
+            <img class="recent-events-image" src="pexels-r-fera-432059.jpg" alt="" />
+        </div>
+        <div class="recent-events-para-container">
+            <div class="event-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="event-container-buttons">
+                <button>Read more...</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="container-info">
+        OUR SERVICES
+        <div class="line"></div>
+    </div>
+    <div class="services-parent-container">
+        <div class="services-container">
+            <div class="services">
+                <div class="service-container">
+                    <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Web / Mobile / Desktop application creation
+                        </div>
+                    </div>
+                   <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Social Media Marketers
+                        </div>
+                    </div>
+                   <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Technical support for IT team
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Web / Mobile / Desktop application creation
+                        </div>
+                    </div>
+                   <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Social Media Marketers
+                        </div>
+                    </div>
+                   <div class="service">
+                        <div class="icon-container">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                        </div>
+                        <div class="content-container">
+                            Technical support for IT team
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="services-inner-rect"></div>
+    </div>
+
+
+    <div class="container-info">
+        OUR PROMISE
+        <div class="line"></div>
+    </div>
+
+    <div class="our-promise-container">
+        <div class="content-for-promise">We make your uniquetivity</div>
+    </div>
+
+
+    <div class="container-info">
+        OUR CLIENTS
+        <div class="line"></div>
+    </div>
+
+    <img id="abc" />
+
+        <div class="clients-container">
+
+            <div class="clients">
+                <img id="firstRect" style="width:100px;height:100px" src="e8289fa2be47856b1f1d2973eddb4cb2.jpg" alt="" />
+            </div>
+
+            <div class="clients">
+                <img id="secondRect" style="width:150px;height:150px;" />
+            </div>
+
+            <div class="clients center-client">
+                <img  id="thirdRect" style="width:200px;height:200px;" />
+            </div>
+
+            <div class="clients">
+                <img id="fourthRect" style="width:150px;height:150px;"src="e8289fa2be47856b1f1d2973eddb4cb2.jpg" alt="" />
+            </div>
+
+            <div class="clients">
+                <img id="fifthRect" style="width:100px;height: 100px;"src="e8289fa2be47856b1f1d2973eddb4cb2.jpg" alt="" />
+            </div>
+
+            <!--    <div class="clients">
+                        <img style="width:100px;height:100px;"src="e8289fa2be47856b1f1d2973eddb4cb2.jpg" alt="" />
+            </div>  -->
+
+
+        </div>
+
+
+
+
+</body>
+
+</html>
